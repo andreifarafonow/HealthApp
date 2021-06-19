@@ -62,7 +62,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Activity2.cs" />
+    <Compile Include="Activity3.cs" />
     <Compile Include="AgeDialog.cs" />
+    <Compile Include="GlobalSettings.cs" />
     <Compile Include="HttpHelper.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="QuestionControler.cs" />

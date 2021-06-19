@@ -87,6 +87,8 @@ namespace HealthApp
             string requestJson = HttpHelper.POST(url, json);
             _Session = System.Text.Json.JsonSerializer.Deserialize<appSessionIdClass>(requestJson).appSessionId;
 
+
+            int o = 0;
         }
 
 
@@ -112,7 +114,10 @@ namespace HealthApp
         {
             allSimptomes.Clear();
             string url = "https://helzy.ru/api/v1/symptoms?name={" + request + "}";
-            webClient.Headers.Add("appSessionId", _Session);
+
+            if(!webClient.Headers.AllKeys.Contains("appSessionId"))
+                webClient.Headers.Add("appSessionId", _Session);
+
             string requestJson = HttpHelper.GET(url, webClient.Headers);
             var unKnownType = System.Text.Json.JsonSerializer.Deserialize<List<Simptomes>>(requestJson);
             allSimptomes.AddRange(unKnownType);

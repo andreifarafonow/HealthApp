@@ -60,6 +60,8 @@ namespace HealthApp
         {
             age = _view.FindViewById<EditText>(Resource.Id.input_text).Text;
 
+            GlobalSettings._questionControler.newDiagnostic(age, pol);
+
             Intent intent = new Intent(Activity, typeof(Activity2));
             StartActivity(intent);
         }

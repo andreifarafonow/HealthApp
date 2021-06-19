@@ -32,7 +32,7 @@
                 android:text="Далее"
                 android:layout_width="54pt"
                 android:layout_height="18pt"
-                android:id="@+id/button1"
+                android:id="@+id/nextButton"
                 android:layout_alignParentRight="true"
                 android:background="@drawable/next_button_style"
                 android:layout_centerVertical="true"
@@ -86,22 +86,13 @@
             <TextView
                 android:layout_width="150pt"
                 android:layout_height="wrap_content"
-                android:text="· Озноб"
+                android:text=""
                 android:textColor="#09848C"
                 android:textSize="16sp"
                 android:layout_marginTop="4pt"
                 android:layout_marginLeft="11pt"
-                android:textStyle="bold"/>
-
-            <TextView
-                android:layout_width="150pt"
-                android:layout_height="wrap_content"
-                android:text="· Температура"
-                android:textColor="#09848C"
-                android:textSize="16sp"
-                android:layout_marginTop="4pt"
-                android:layout_marginLeft="11pt"
-                android:textStyle="bold"/>
+                android:textStyle="bold"
+                android:id="@+id/symptomsList"    />
 
 
         </LinearLayout>
@@ -115,7 +106,7 @@
                 <Button
                 android:layout_width="match_parent"
                 android:layout_height="20pt"
-                android:id="@+id/symptom1"
+                android:id="@+id/symptom3"
                     />
                 
                 <Button
@@ -126,7 +117,7 @@
                <Button
                 android:layout_width="match_parent"
                 android:layout_height="20pt"
-                android:id="@+id/symptom3"/>
+                android:id="@+id/symptom1"/>
 
                 <EditText
                     android:layout_width="match_parent"

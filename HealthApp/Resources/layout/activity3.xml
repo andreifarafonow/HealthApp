@@ -88,7 +88,8 @@
                 android:shadowColor="@null"
                 android:layout_gravity="center_horizontal"
                 android:textAllCaps="false"
-                android:gravity="center_vertical"/>
+                android:gravity="center_vertical"
+                android:id="@+id/answer1"/>
 
             <Button
                 android:id="@+id/button4"
@@ -101,7 +102,8 @@
                 android:shadowColor="@null"
                 android:layout_gravity="center_horizontal"
                 android:textAllCaps="false"
-                android:gravity="center_vertical"/>
+                android:gravity="center_vertical"
+                android:id="@+id/answer2"/>
 
 <Button
                 android:id="@+id/button5"
@@ -114,7 +116,8 @@
                 android:shadowColor="@null"
                 android:layout_gravity="center_horizontal"
                 android:textAllCaps="false"
-                android:gravity="center_vertical"/>
+                android:gravity="center_vertical"
+                android:id="@+id/answer3"/>
 
             <Button
                 android:id="@+id/button6"
@@ -127,7 +130,8 @@
                 android:shadowColor="@null"
                 android:layout_gravity="center_horizontal"
                 android:textAllCaps="false"
-                android:gravity="center_vertical"/>
+                android:gravity="center_vertical"
+                android:id="@+id/answer4"/>
 
             <Button
                 android:id="@+id/button2"
@@ -140,7 +144,8 @@
                 android:shadowColor="@null"
                 android:layout_gravity="center_horizontal"
                 android:textAllCaps="false"
-                android:gravity="center_vertical"/>
+                android:gravity="center_vertical"
+                android:id="@+id/answer5"/>
 
 
 

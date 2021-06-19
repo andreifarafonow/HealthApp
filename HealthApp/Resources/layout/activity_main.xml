@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:src="@drawable/frame10"
+        android:visibility="invisible"/>
+
+    <LinearLayout
+    
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/linearLayout1"
+        android:background="@android:color/transparent"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="32.5pt"
+            android:background="@android:color/transparent">
+
+            <ImageView
+                android:src="@drawable/logo"
+                android:layout_width="144.7dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="8pt"
+                android:layout_marginBottom="2pt"/>
+            
+
+        
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="105pt"
+            android:background="@drawable/bottom_round"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Плохо себя чувствуете?"
+                android:textAlignment="center"
+                android:textColor="#F4FFFD"
+                android:textSize="27sp"
+                android:textStyle="bold"
+                android:layout_marginTop="4pt"/>
+            <TextView
+                android:layout_width="125pt"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Опишите симптомы - мы определим возможные диагнозы и подберём нужного специалиста"
+                android:textAlignment="center"
+                android:textColor="#C0FFF4"
+                android:textSize="15sp"
+                android:layout_marginTop="4pt"/>
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="250dp"
+                android:layout_height="55dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/roundedButtonStart"
+                android:text="Начать диагностику"
+                android:textColor="#128A92"
+                android:textSize="16sp" 
+                android:textStyle="bold"
+                android:layout_marginTop="10pt"/>
+
+         </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10pt"
+                android:paddingRight="10pt"
+                android:layout_marginTop="5pt">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="История заболеваний"
+                    android:textColor="#126065"
+                    android:textSize="7pt"
+                    android:textStyle="bold"
+                    android:layout_marginTop="4pt"
+                    android:layout_centerVertical="true"/>
+
+                <Button
+                    android:id="@+id/buttonExport"
+                    android:layout_width="60pt"
+                    android:layout_height="16pt"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/exportButton"
+                    android:text="Экспорт"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp" 
+                    android:layout_marginTop="10pt"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="125pt"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Здесь будет храниться Ваша история симптомов и диагнозов"
+                android:textAlignment="center"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="15sp"
+                android:layout_margin="75pt"/>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/linearLayout1"
+        android:background="@android:color/transparent"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="32.5pt"
+            android:background="@android:color/transparent">
+
+            <ImageView
+                android:src="@drawable/logo"
+                android:layout_width="144.7dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="8pt"
+                android:layout_marginBottom="2pt"/>
+            <Button
+                android:text="Далее"
+                android:layout_width="54pt"
+                android:layout_height="18pt"
+                android:id="@+id/button1"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/next_button_style"
+                android:layout_centerVertical="true"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:textSize="9pt"
+                android:visibility="visible"
+                />
+
+
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="395dp"
+                android:layout_height="100dp"
+                android:src="@drawable/gus2" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Укажите симптомы"
+                android:textColor="#09848C"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_marginLeft="10pt"/>
+
+            <TextView
+                android:layout_width="150pt"
+                android:layout_height="wrap_content"
+                android:text="Нажмите кнопку ввести симптомы и выберите подходящий из списка"
+                android:textColor="#b1c5c6"
+                android:textSize="16sp"
+                android:layout_marginTop="4pt"
+                android:layout_marginLeft="10pt"/>
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="150pt"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10pt"
+                android:text="       Продолжить"
+                android:background="@drawable/button_anc"
+                android:textColor="#32B08A"
+                android:shadowColor="@null"
+                android:layout_gravity="center_horizontal"
+                android:textAllCaps="false"
+                android:gravity="center_vertical"/>
+
+            <Button
+                android:id="@+id/button4"
+                android:layout_width="150pt"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10pt"
+                android:text="       Продолжить"
+                android:background="@drawable/button_anc"
+                android:textColor="#32B08A"
+                android:shadowColor="@null"
+                android:layout_gravity="center_horizontal"
+                android:textAllCaps="false"
+                android:gravity="center_vertical"/>
+
+<Button
+                android:id="@+id/button5"
+                android:layout_width="150pt"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10pt"
+                android:text="       Продолжить"
+                android:background="@drawable/button_anc"
+                android:textColor="#32B08A"
+                android:shadowColor="@null"
+                android:layout_gravity="center_horizontal"
+                android:textAllCaps="false"
+                android:gravity="center_vertical"/>
+
+            <Button
+                android:id="@+id/button6"
+                android:layout_width="150pt"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10pt"
+                android:text="       Продолжить"
+                android:background="@drawable/button_anc"
+                android:textColor="#32B08A"
+                android:shadowColor="@null"
+                android:layout_gravity="center_horizontal"
+                android:textAllCaps="false"
+                android:gravity="center_vertical"/>
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="150pt"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10pt"
+                android:text="       Продолжить"
+                android:background="@drawable/button_anc"
+                android:textColor="#32B08A"
+                android:shadowColor="@null"
+                android:layout_gravity="center_horizontal"
+                android:textAllCaps="false"
+                android:gravity="center_vertical"/>
+
+
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</FrameLayout>

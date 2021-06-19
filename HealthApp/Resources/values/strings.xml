@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">HealthApp</string>
+    <string name="action_settings">Settings</string>
+
+  <string-array name="spinner">
+    <item>Мужской</item>
+    <item>Женский</item>
+  </string-array>
+</resources>

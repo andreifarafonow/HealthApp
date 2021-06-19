@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_root"
+    android:layout_width="wrap_content"
+    android:layout_height="150pt"
+    android:orientation="vertical"
+    android:padding="30dp"
+    android:background="@android:color/white">
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="140pt"
+        android:layout_height="wrap_content"
+        android:text="Укажите ваш пол и возраст"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#09848C"
+        android:textStyle="bold"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="25pt"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/maleButton"
+            android:layout_width="50pt"
+            android:layout_height="20pt"
+            android:text="Мужской"/>
+
+        <Button
+            android:id="@+id/femaleButton"
+            android:layout_width="50pt"
+            android:layout_height="20pt"
+            android:text="Женский"/>
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/input_text"
+        android:layout_width="120pt"
+        android:layout_marginTop="10pt"
+        android:layout_height="39dp" 
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/custom_input"
+        android:inputType="number"
+        android:hint="Введите возраст"
+        android:paddingLeft="10pt">
+        
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="100pt"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10pt"
+        android:text="Продолжить"
+        android:background="@drawable/prod_button_style"
+        android:textColor="@android:color/white"
+        android:shadowColor="@null"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"/>
+
+</LinearLayout>

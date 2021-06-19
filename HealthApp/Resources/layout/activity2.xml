@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+    
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/linearLayout1"
+        android:background="@android:color/transparent"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="32.5pt"
+            android:background="@android:color/transparent">
+
+            <ImageView
+                android:src="@drawable/logo"
+                android:layout_width="144.7dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="8pt"
+                android:layout_marginBottom="2pt"/>
+            <Button
+                android:text="Далее"
+                android:layout_width="54pt"
+                android:layout_height="18pt"
+                android:id="@+id/button1"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/next_button_style"
+                android:layout_centerVertical="true"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:textSize="9pt"
+                android:visibility="visible"
+                />
+
+        
+
+        </RelativeLayout>
+
+        
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginLeft="3pt"
+                android:src="@drawable/gus1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Укажите симптомы"
+                android:textColor="#09848C"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_marginLeft="11pt"/>
+
+            <TextView
+                android:layout_width="150pt"
+                android:layout_height="wrap_content"
+                android:text="Нажмите кнопку ввести симптомы и выберите подходящий из списка"
+                android:textColor="#b1c5c6"
+                android:textSize="16sp"
+                android:layout_marginTop="4pt"
+                android:layout_marginLeft="11pt"
+                android:layout_marginBottom="5pt"/>
+
+            <TextView
+                android:layout_width="150pt"
+                android:layout_height="wrap_content"
+                android:text="· Озноб"
+                android:textColor="#09848C"
+                android:textSize="16sp"
+                android:layout_marginTop="4pt"
+                android:layout_marginLeft="11pt"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="150pt"
+                android:layout_height="wrap_content"
+                android:text="· Температура"
+                android:textColor="#09848C"
+                android:textSize="16sp"
+                android:layout_marginTop="4pt"
+                android:layout_marginLeft="11pt"
+                android:textStyle="bold"/>
+
+
+        </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_alignParentBottom="true">
+
+                <Button
+                android:layout_width="match_parent"
+                android:layout_height="20pt"
+                android:id="@+id/symptom1"
+                    />
+                
+                <Button
+                android:layout_width="match_parent"
+                android:layout_height="20pt"
+                android:id="@+id/symptom2"/>
+
+               <Button
+                android:layout_width="match_parent"
+                android:layout_height="20pt"
+                android:id="@+id/symptom3"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="30pt"
+                
+                    android:id="@+id/symptomInput"/>
+
+             </LinearLayout>
+
+            
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

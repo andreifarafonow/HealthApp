@@ -28,19 +28,6 @@
                 android:layout_height="match_parent"
                 android:layout_marginLeft="8pt"
                 android:layout_marginBottom="2pt"/>
-            <Button
-                android:text="Далее"
-                android:layout_width="54pt"
-                android:layout_height="18pt"
-                android:id="@+id/button1"
-                android:layout_alignParentRight="true"
-                android:background="@drawable/next_button_style"
-                android:layout_centerVertical="true"
-                android:textAllCaps="false"
-                android:textColor="@android:color/white"
-                android:textSize="9pt"
-                android:visibility="visible"
-                />
 
 
 
@@ -66,7 +53,8 @@
                 android:textColor="#09848C"
                 android:textSize="24sp"
                 android:textStyle="bold"
-                android:layout_marginLeft="10pt"/>
+                android:layout_marginLeft="10pt"
+                android:id="@+id/qHead"/>
 
             <TextView
                 android:layout_width="150pt"
@@ -75,11 +63,11 @@
                 android:textColor="#b1c5c6"
                 android:textSize="16sp"
                 android:layout_marginTop="4pt"
-                android:layout_marginLeft="10pt"/>
+                android:layout_marginLeft="10pt"
+                android:id="@+id/qSubHead"/>
 
             <Button
-                android:id="@+id/button3"
-                android:layout_width="150pt"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10pt"
                 android:text="       Продолжить"
@@ -89,11 +77,12 @@
                 android:layout_gravity="center_horizontal"
                 android:textAllCaps="false"
                 android:gravity="center_vertical"
-                android:id="@+id/answer1"/>
+                android:id="@+id/answer1"
+                android:layout_marginLeft="6pt"
+                android:layout_marginRight="6pt"/>
 
             <Button
-                android:id="@+id/button4"
-                android:layout_width="150pt"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10pt"
                 android:text="       Продолжить"
@@ -103,25 +92,12 @@
                 android:layout_gravity="center_horizontal"
                 android:textAllCaps="false"
                 android:gravity="center_vertical"
-                android:id="@+id/answer2"/>
-
-<Button
-                android:id="@+id/button5"
-                android:layout_width="150pt"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10pt"
-                android:text="       Продолжить"
-                android:background="@drawable/button_anc"
-                android:textColor="#32B08A"
-                android:shadowColor="@null"
-                android:layout_gravity="center_horizontal"
-                android:textAllCaps="false"
-                android:gravity="center_vertical"
-                android:id="@+id/answer3"/>
+                android:id="@+id/answer2"
+                android:layout_marginLeft="6pt"
+                android:layout_marginRight="6pt"/>
 
             <Button
-                android:id="@+id/button6"
-                android:layout_width="150pt"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10pt"
                 android:text="       Продолжить"
@@ -131,11 +107,12 @@
                 android:layout_gravity="center_horizontal"
                 android:textAllCaps="false"
                 android:gravity="center_vertical"
-                android:id="@+id/answer4"/>
+                android:id="@+id/answer3"
+                android:layout_marginLeft="6pt"
+                android:layout_marginRight="6pt"/>
 
             <Button
-                android:id="@+id/button2"
-                android:layout_width="150pt"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10pt"
                 android:text="       Продолжить"
@@ -145,7 +122,24 @@
                 android:layout_gravity="center_horizontal"
                 android:textAllCaps="false"
                 android:gravity="center_vertical"
-                android:id="@+id/answer5"/>
+                android:id="@+id/answer4"
+                android:layout_marginLeft="6pt"
+                android:layout_marginRight="6pt"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10pt"
+                android:text="       Продолжить"
+                android:background="@drawable/button_anc"
+                android:textColor="#32B08A"
+                android:shadowColor="@null"
+                android:layout_gravity="center_horizontal"
+                android:textAllCaps="false"
+                android:gravity="center_vertical"
+                android:id="@+id/answer5"
+                android:layout_marginLeft="6pt"
+                android:layout_marginRight="6pt"/>
 
 
 

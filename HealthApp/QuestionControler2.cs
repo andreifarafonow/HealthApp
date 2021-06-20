@@ -5,6 +5,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,13 +25,78 @@ namespace HealthApp
         public List<Simptomes> allSimptomes = new List<Simptomes>();
         public List<Simptomes> chooseSimptomes = new List<Simptomes>();
 
-        public string StartQuestion()
+        public (string question, string desc, string[] answers, string questionnaireId, string linkId) StartQuestion(string i)
         {
-            string url = "https://helzy.ru/api/v1/steps/1";
-            string requestJson = HttpHelper.GET(url, webClient.Headers);
-            return requestJson;
+            string url = "https://helzy.ru/api/v1/steps/" + i;
+            string s = HttpHelper.GET(url, webClient.Headers);
+
+            JObject json = JObject.Parse(s);
+
+            string questionnaireId = json["questionnaire"]["id"].ToString();
+
+            string linkId = json["questionnaire"]["items"][0]["id"].ToString();
+
+            var answers = json["questionnaire"]["items"][0]["options"].ToArray().Select(x => x.ToString()).ToArray();
+            var question = json["questionnaire"]["title"].ToString();
+
+            string desc = "";
+
+            try
+            {
+                desc = json["questionnaire"]["items"][0]["description"].ToString();
+            }
+            catch
+            {
+
+            }
+
+            List<string> answersString = new List<string>();
+
+            foreach (var answer in answers)
+            {
+                answersString.Add(answer.ToString().Replace("{{", "{").Replace("}}", "}"));
+            }
+
+            return (question, desc, answersString.ToArray(), questionnaireId, linkId);
+        }
+
+        public Disease FinalRequest()
+        {
+            string url = "https://helzy.ru/api/v1/reports";
+
+            string s = HttpHelper.GET(url, webClient.Headers);
+
+            JObject json = JObject.Parse(s);
 
 
+            Disease disease = new Disease()
+            {
+                Title = json["diseases"][0]["title"].ToString(),
+                Detail = json["diseases"][0]["detail"].ToString(),
+                DetailWithAnswers = json["summary"]["detail"].ToString(),
+                Probalility = json["diseases"][0]["url"].ToString()
+
+            };
+
+            return disease;
+        }
+
+        public string SendAnswer(string answer, string questionnaireId, string linkId)
+        {
+            string data = "{\"questionnaireId\":\"" + questionnaireId +
+                 "\",\"items\":[{\"linkId\":\"" + linkId +
+                 "\",\"answer\":" + answer + "}]}";
+
+            WebHeaderCollection headers = new WebHeaderCollection();
+
+            headers.Add(HttpRequestHeader.Accept, "application/json, text/plain, */*");
+            headers.Add("AppSessionId", _Session);
+            headers.Add(HttpRequestHeader.UserAgent, "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 YaBrowser/21.5.3.742 Yowser/2.5 Safari/537.36");
+            headers.Add(HttpRequestHeader.ContentType, "application/json");
+
+            var result = HttpHelper.POST("https://helzy.ru/api/v1/steps", data, headers);
+
+            return result;
         }
 
         internal void SendSimptomes()
@@ -88,7 +154,7 @@ namespace HealthApp
             _Session = System.Text.Json.JsonSerializer.Deserialize<appSessionIdClass>(requestJson).appSessionId;
 
 
-            int o = 0;
+
         }
 
 
@@ -114,10 +180,7 @@ namespace HealthApp
         {
             allSimptomes.Clear();
             string url = "https://helzy.ru/api/v1/symptoms?name={" + request + "}";
-
-            if(!webClient.Headers.AllKeys.Contains("appSessionId"))
-                webClient.Headers.Add("appSessionId", _Session);
-
+            webClient.Headers.Add("appSessionId", _Session);
             string requestJson = HttpHelper.GET(url, webClient.Headers);
             var unKnownType = System.Text.Json.JsonSerializer.Deserialize<List<Simptomes>>(requestJson);
             allSimptomes.AddRange(unKnownType);
@@ -147,6 +210,8 @@ namespace HealthApp
         public string appSessionId { get; set; }
     }
 
+
+
     public class Simptomes
     {
         public string system { get; set; }
@@ -157,4 +222,11 @@ namespace HealthApp
         public string shortDisplay { get; set; }
     }
 
+    public class Disease
+    {
+        public string Title { get; set; }
+        public string DetailWithAnswers { get; set; }
+        public string Detail { get; set; }
+        public string Probalility { get; set; }
+    }
 }

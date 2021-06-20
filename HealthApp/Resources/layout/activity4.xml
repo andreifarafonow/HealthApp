@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/linearLayout1"
+        android:background="@android:color/transparent"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="32.5pt"
+            android:background="@android:color/transparent">
+
+            <ImageView
+                android:src="@drawable/logo"
+                android:layout_width="144.7dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="8pt"
+                android:layout_marginBottom="2pt"/>
+
+
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="395dp"
+                android:layout_height="100dp"
+                android:src="@drawable/gus3" />
+
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50pt"
+                android:layout_margin="10pt"
+                android:background="@drawable/button_anc"
+                android:padding="5pt"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Пневмония"
+                    android:textColor="#09848C"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="8pt"
+                    android:id="@+id/resultView"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="(38% вероятность)"
+                    android:textSize="18sp"
+                    android:layout_marginLeft="8pt"
+                    android:textColor="#09848C" 
+                    android:id="@+id/percentageView"/>
+
+                
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="150pt"
+                android:layout_height="wrap_content"
+                android:text="(38% вероятность)"
+                android:textSize="18sp"
+                android:layout_marginLeft="13pt"
+                android:id="@+id/recomView"
+                android:textColor="#09848C"/>
+
+            <Button
+                android:id="@+id/findDoctor"
+                android:layout_width="110pt"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10pt"
+                android:text="Найти врача"
+                android:background="@drawable/prod_button_style"
+                android:textColor="@android:color/white"
+                android:shadowColor="@null"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal"/>
+
+        </LinearLayout>
+
+        </ScrollView>
+        
+
+
+    </LinearLayout>
+
+</FrameLayout>

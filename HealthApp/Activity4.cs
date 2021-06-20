@@ -33,7 +33,6 @@ namespace HealthApp
             {
                 base.OnCreate(savedInstanceState);
 
-                GlobalSettings._questionControler.SendSimptomes();
                 //GlobalSettings._questionControler.StartQuestion();
 
                 Window.SetBackgroundDrawableResource(Resource.Drawable.top_bar_gradient);
@@ -47,8 +46,8 @@ namespace HealthApp
                 var result = GlobalSettings._questionControler.FinalRequest();
 
                 FindViewById<TextView>(Resource.Id.resultView).Text = result.Title;
-                FindViewById<TextView>(Resource.Id.res).Text = $"({result.Probalility}% вероятность)";
-                FindViewById<TextView>(Resource.Id.resultView).Text = $"({result.Probalility}% вероятность)";
+                FindViewById<TextView>(Resource.Id.percentageView).Text = $"({result.Probalility}% вероятность)";
+                FindViewById<TextView>(Resource.Id.recomView).Text = result.Detail;
             }
         }
     }

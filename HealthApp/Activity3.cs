@@ -42,7 +42,8 @@ namespace HealthApp
                 FindViewById<Button>(Resource.Id.answer2),
                 FindViewById<Button>(Resource.Id.answer3),
                 FindViewById<Button>(Resource.Id.answer4),
-                FindViewById<Button>(Resource.Id.answer5)
+                FindViewById<Button>(Resource.Id.answer5),
+                FindViewById<Button>(Resource.Id.answer6)
             };
 
             foreach(var button in buttons)
